@@ -193,7 +193,7 @@ const InstagramSafetySimulator = () => {
             {/* Progress Bar - Sticky */}
             <div className="sticky top-16 bg-white border-b border-gray-200 p-4 z-40">
               <div className="flex justify-between items-center mb-1">
-                  <span className="text-sm font-medium text-gray-600">İlerleme: {currentScenario} / {scenarios.length}</span>
+                  <span className="text-sm font-medium text-gray-700">İlerleme: {currentScenario} / {scenarios.length}</span>
               </div>
               <div className="bg-gray-200 rounded-full h-2.5">
                   <div 
@@ -213,16 +213,18 @@ const InstagramSafetySimulator = () => {
                 <div key={post.id} className="bg-white border-b">
                   <div className="flex items-center p-3">
                     <div className="text-3xl mr-3">{post.avatar}</div>
-                    <h3 className="font-semibold text-sm">{post.username}</h3>
+                    <h3 className="font-semibold text-sm text-gray-900">{post.username}</h3>
                   </div>
                   <div className="aspect-square bg-gray-100 flex items-center justify-center text-8xl">{post.image}</div>
                   <div className="p-3">
                     <div className="flex space-x-4 mb-2">
-                      <Heart className="w-6 h-6" /> <MessageCircle className="w-6 h-6" /> <Send className="w-6 h-6" />
+                      <Heart className="w-6 h-6 text-gray-700" /> 
+                      <MessageCircle className="w-6 h-6 text-gray-700" /> 
+                      <Send className="w-6 h-6 text-gray-700" />
                     </div>
-                    <p className="font-semibold text-sm mb-1">{post.likes} beğeni</p>
-                    <p className="text-sm">
-                      <span className="font-semibold">{post.username}</span> {post.caption}
+                    <p className="font-semibold text-sm mb-1 text-gray-900">{post.likes} beğeni</p>
+                    <p className="text-sm text-gray-800">
+                      <span className="font-semibold text-gray-900">{post.username}</span> {post.caption}
                     </p>
                     <p className="text-xs text-gray-500 mt-1">{post.time}</p>
                   </div>
@@ -248,7 +250,7 @@ const InstagramSafetySimulator = () => {
               <div className="text-3xl">{notification.avatar}</div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold text-sm">{notification.sender}</h4>
+                  <h4 className="font-semibold text-sm text-gray-900">{notification.sender}</h4>
                   <span className="text-xs text-gray-500">{notification.timestamp}</span>
                 </div>
                 
